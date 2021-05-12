@@ -12,5 +12,19 @@ class EditUser extends LitElement {
   }
 
   // din kode her
+  constructor() {
+    user = new FormData(e.EditUser);
+    fetch("api/updateUser.php", {
+      method: "POST",
+      credentials: "include",
+      body: user,
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res.status);
+      });
+  }
 }
 customElements.define("edit-user", EditUser);
