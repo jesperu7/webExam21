@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script type="module" src="./js/components/edit-user.js"></script>
+  </head>
+  <body>
+    
+    
+    <form >
+        <label>Username</label> <input id="uname" name="username" value="${this.user.uname}"><br>
+        <label>Firstname</label> <input id="firstName" type="text" name="firstName" value="${this.user.firstName}"><br>
+        <label>Lastname</label> <input type="text" id="lastName" name="lastName" value="${this.user.lastName}"><br>
+        <label>Old Passwrord</label> <input type="password" id="oldPassword" name="oldPassword" ><br>
+        <label>New Password</label><input type="password" id="newPassword" name="newPassword" ><br>
+        <br><input type="Submit" id="submit" name="submit" value="Update User" @click="${this.edit}"><br>
+      </form>
+  </body>
+</html>
