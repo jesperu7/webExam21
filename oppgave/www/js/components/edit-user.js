@@ -13,7 +13,7 @@ class EditUser extends LitElement {
 
   // din kode her
   constructor() {
-    user = new FormData(e.EditUser);
+    const user = new FormData(e.target);
     fetch("api/updateUser.php", {
       method: "POST",
       credentials: "include",
@@ -27,4 +27,5 @@ class EditUser extends LitElement {
       });
   }
 }
+
 customElements.define("edit-user", EditUser);
