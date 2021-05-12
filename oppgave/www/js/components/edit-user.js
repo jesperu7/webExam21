@@ -13,7 +13,9 @@ class EditUser extends LitElement {
 
   // din kode her
   constructor() {
+    // getting data from form
     const user = new FormData(e.target);
+    // post on updateUser API with the user data included
     fetch("api/updateUser.php", {
       method: "POST",
       credentials: "include",
